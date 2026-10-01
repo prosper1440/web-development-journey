@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: arvo;
+    src: url(Arvo-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: arial;
+    position: relative;
+    overflow-x: hidden;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #190019;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#logo-name {
+    font-family: arvo;
+    font-size: 20px;
+}
+
+#logo-motto {
+    font-family: arvo;
+    font-style: italic;
+    font-size: 10px;
+}
+
+#nav-btns {
+    width: 400px;
+    box-sizing: border-box;
+}
+
+.nav-btns {
+    padding: 5px;
+    color: #fff;
+    background-color: #190019;
+    border-radius: 0;
+    transition: 0.15s ease;
+}
+
+#shop-btn {
+    color: #fff;
+    background-color: #190019;
+    border-radius: 2px;
+    padding: 4px 8px;
+    transition: 0.15s ease;
+    border: 1px solid white;
+    display: none;
+}
+
+@media (max-width:768px) {
+    .nav-btns {
+        display: none;
+    }
+    #shop-btn {
+        display: inline-block;
+    }
+}
+
+.nav-btns:hover {
+    padding: 5px 5px 4px 5px ;
+    border-bottom: 1px solid #FBE4D8;
+}
+
+.nav-btns:active {
+    background-color: #Ffff;
+    color: #190019;
+    border-radius: 4px;
+}
+
+#shops {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 30px;
+    gap: 20px;
+    z-index: 500;
+    display: none;
+}
+
+
+
+
+
+#logo-name, #logo-motto {
+    margin: 0;
+    color: #FBE4D8;
+}
+
+header {
+    height: 400px;
+    position: relative;
+    background-color: #FBE4D8;
+    margin: 0;
+    border-bottom: 12px solid #190019;
+    z-index: 1;
+}
+
+#header-dtls {
+    font-size: 50px;
+    padding: 5px;
+    z-index: 200;
+}
+
+@media (max-width:480px) {
+    #header-dtls {
+        font-size: 25px;
+        text-align: center;        
+    }
+
+    header {
+        height: 300px;
+        width: 100%;
+    }
+}
+
+
+#let {
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    height: 300px;
+    z-index: 200;
+}
+
+#let1 {
+    position: absolute;
+    top: 180px;
+    right: 170px;
+    height: 300px;
+    z-index: 200;
+}
+
+#let2 {
+    position: absolute;
+    top: 180px;
+    right: 40px;
+    height: 300px;
+    z-index: 200;
+}
+
+#let3 {
+    position: absolute;
+    top: 260px;
+    right: 100px;
+    height: 300px;
+    z-index: 200;
+}
+
+@media (max-width:768px) {
+    #let, #let1, #let2, #let3 {
+        display: none;
+    } 
+}
+
+#logo-text {
+    width: 100%;
+}
+
+#welcome-txt {
+    position: relative;
+    top: 60px;
+    left: 10px;
+    font-size: 40px;
+}
+
+#company-name {
+    position: relative;
+    top: 60px;
+    left: 10px;
+    font-size: 40px;
+}
+
+
+@media (max-width:480px) {
+    #welcome-txt {
+        font-size: 25px;
+        font-style: italic;
+        top: 30px;
+        left: -10px;      
+    }
+
+    #company-name {
+        font-size: 55px;
+        top: 10px;
+        left: auto;        
+    }
+}
+
+@media (max-width:768px) {
+    #welcome-txt {
+        font-size: 50px;
+        font-style: italic;
+        top: 30px;
+        left: -10px;      
+    }
+
+    #company-name {
+        font-size: 60px;
+        top: 10px;
+        left: auto;        
+    }
+}
+
+
+.section-title {
+    margin-top: 70px;
+}
+
+#pdt-ct-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 710px;
+    margin: 10px auto 70px auto;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width:768px) {
+    #pdt-ct-cards-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 90%;
+        justify-items: center;
+    }
+}
+
+@media (max-width:480px) {
+    #pdt-ct-cards-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        justify-items: center;
+    }
+}
+
+.pdt-ct-cards {
+    text-align: left;
+    width: 200px;
+    padding: 10px 0 10px 15px;
+    border-radius: 15px 0px;
+    background: #FBE4D8;
+    transition: 0.15s ease;
+}
+
+.pdt-ct-cards:hover {
+    transform: translateY(-5px) scale(1.03) ;
+    box-shadow: 0 10px 10px 1px lightgrey;
+}
+
+.pdt-icon {
+    height: 80px;
+    width: 80px;
+    border-radius: 100px;
+    object-fit: cover;
+    object-position: top;
+}
+.pdt-desc {
+    margin: 0px auto 5px;
+    font-size: 10px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.pdt-name {
+    margin: 10px auto 10px auto;
+}
+
+.action-btn {
+    margin-top: 5px;
+    transition: 0.15s ease;
+}
+
+.action-btn:hover {
+    box-shadow: 0 0 3px 1px lightgray;
+}
+
+.action-btn:active {
+    background-color: #200120;
+    color: white;
+    transform: scale(1.05);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+}
+
+#review {
+    display: flex;
+    gap: 20px;
+    margin: auto;
+    width: 90%;
+    box-sizing: border-box;
+}
+.rvw-txt {
+    font-size: 15px;
+    text-align: center;
+    align-content: center;
+    background-color: #FBE4D8;
+    box-sizing: border-box;
+    width: 400px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 200px;
+    margin: 0;
+}
+
+@media (max-width:480px) {
+    .rvw-txt {
+        font-size: 12px;
+        width: 250px;
+    }
+}
+
+@media (max-width:768px) {
+    #review {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+.rvw-txt:hover {
+    transform: translateY(3px) scale(1.03);
+    box-shadow: 0 0 10px 1px #FBE4D8;
+}
+
+footer {
+    padding: 10px;
+    height: 180px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+    background: #190019;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+#foot-name, #foot-motto {
+    color: #FBE4D8;
+    margin-bottom: 0;
+}
+
+#foot-motto {
+    font-size: 10px;
+    margin-top: 0;
+}
+
+#Facebook, #Twitter, #TikTok, #Instagram {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: #FBE4D8;
+    margin-top: 10px;
+    transition: 0.15s ease;
+}
+
+#Facebook:hover, #Twitter:hover, #TikTok:hover, #Instagram:hover {
+    text-decoration: underline;
+}
+
+#real {
+    color: #FBE4D8;
+    margin-left: 40px;
+}

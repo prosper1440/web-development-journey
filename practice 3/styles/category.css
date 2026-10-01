@@ -1,0 +1,163 @@
+@font-face {
+    font-family: arvo;
+    src: url(Arvo-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #FBE4D8, white);
+    margin-top: 90px;
+}
+
+nav {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 30px; 
+    background-color: white;
+    margin-bottom: 15px;  
+    position: fixed;
+    top: 0;
+}
+
+#category-name {
+    font-family: arvo;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+#back-btn {
+    padding: 10px 23px;
+    border: none;
+    color: #FBE4D8;
+    background-color: #190019;
+    border-radius: 5px;
+    transition: 0.15s ease;
+}
+
+#back-btn:hover {
+    transform: scale(1.11);
+}
+
+#back-btn:active {
+    background-color: #Ffff;
+    color: #190019;
+    border: 1px solid #190019;
+}
+
+#pdt-grid {
+    display: grid;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+@media (max-width:768px) {
+    #pdt-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:600px) {
+    #pdt-grid {
+        grid-template-columns: repeat(2, 1fr);
+        width: 60%;
+        gap: 10px;
+    }
+
+    .pdt-card {
+        width: 70px;
+    }
+}
+
+@media (max-width:480px) {
+    #pdt-grid {
+        grid-template-columns: 1fr;
+        width: 40%;
+        gap: 20px;
+    }
+
+    .pdt-card {
+        width: 200px;
+    }
+}
+
+.pdt-card {
+    width: 200px;
+    height: 300px;
+    border-radius: 0 0 20px 0;
+    box-sizing: border-box;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.pdt-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0 0 10px 10px;
+}
+
+.pdt-dtls, .cart-btn {
+    margin-left: 10px;
+}
+
+.pdt-price {
+    color: #190019;
+    font-weight: normal;
+}
+
+.cart-btn {
+    padding: 10px 23px;
+    border: none;
+    color: #FBE4D8;
+    background: #190019;
+    border-radius: 5px;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    margin-top: 40px;
+    background: #190019;
+}
+
+footer {
+    padding: 10px;
+    height: 180px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 40px;
+    background: #190019;
+    text-align: left;
+    font-family: arial;
+}
+
+#foot-name, #foot-motto {
+    color: #FBE4D8;
+    margin-bottom: 0;
+}
+
+#foot-motto {
+    font-size: 10px;
+    margin-top: 0;
+}
+
+#Facebook, #Twitter, #TikTok, #Instagram {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: #FBE4D8;
+    margin-top: 0;
+    transition: 0.15s ease;
+}
+
+#Facebook:hover, #Twitter:hover, #TikTok:hover, #Instagram:hover {
+    text-decoration: underline;
+}
